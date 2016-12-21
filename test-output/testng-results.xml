@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="18269" started-at="2016-12-20T03:59:34Z" finished-at="2016-12-20T03:59:52Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="18269" started-at="2016-12-20T03:59:34Z" finished-at="2016-12-20T03:59:52Z">
+      <class name="com.lls.testng.TestDeal">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.lls.testng.TestDeal@5d5bdc50]" name="setup" is-config="true" duration-ms="3276" started-at="2016-12-20T11:59:34Z" finished-at="2016-12-20T11:59:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="f()[pri:0, instance:com.lls.testng.TestDeal@5d5bdc50]" name="f" duration-ms="14982" started-at="2016-12-20T11:59:37Z" finished-at="2016-12-20T11:59:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+      </class> <!-- com.lls.testng.TestDeal -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

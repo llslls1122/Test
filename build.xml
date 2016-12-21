@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. -->
+<project basedir="." default="build" name="Test">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="D:/MyEclipse2013"/>
+    <property name="junit.output.dir" value="junit"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.6"/>
+    <property name="source" value="1.6"/>
+    <path id="Test.classpath">
+        <pathelement location="bin"/>
+        <pathelement location="libs/selenium-server-standalone-2.45.0.jar"/>
+        <pathelement location="D:/MyEclipse2013/dropins/org.testng.eclipse_6.9.13.201609291640.jar"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="Test.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="Correct">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.lls.Correct" todir="${junit.output.dir}"/>
+            <classpath refid="Test.classpath"/>
+        </junit>
+    </target>
+    <target name="CorSec">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.lls.CorSec" todir="${junit.output.dir}"/>
+            <classpath refid="Test.classpath"/>
+        </junit>
+    </target>
+    <target name="CorSecChromer">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.lls.CorSecChromer" todir="${junit.output.dir}"/>
+            <classpath refid="Test.classpath"/>
+        </junit>
+    </target>
+    <target name="CorSecMydriver">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.lls.CorSecMydriver" todir="${junit.output.dir}"/>
+            <classpath refid="Test.classpath"/>
+        </junit>
+    </target>
+    <target name="Deal">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.lls.Deal" todir="${junit.output.dir}"/>
+            <classpath refid="Test.classpath"/>
+        </junit>
+    </target>
+    <target name="DealCash">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.lls.DealCash" todir="${junit.output.dir}"/>
+            <classpath refid="Test.classpath"/>
+        </junit>
+    </target>
+    <target name="DealIn">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.lls.DealIn" todir="${junit.output.dir}"/>
+            <classpath refid="Test.classpath"/>
+        </junit>
+    </target>
+    <target name="DealOut">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.lls.DealOut" todir="${junit.output.dir}"/>
+            <classpath refid="Test.classpath"/>
+        </junit>
+    </target>
+    <target name="DealOutTrue">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.lls.DealOutTrue" todir="${junit.output.dir}"/>
+            <classpath refid="Test.classpath"/>
+        </junit>
+    </target>
+    <target name="DealP (1)">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.lls.DealP" todir="${junit.output.dir}"/>
+            <classpath refid="Test.classpath"/>
+        </junit>
+    </target>
+    <target name="DealPay">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.lls.DealPay" todir="${junit.output.dir}"/>
+            <classpath refid="Test.classpath"/>
+        </junit>
+    </target>
+    <target name="DealPayFire">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.lls.DealPayFire" todir="${junit.output.dir}"/>
+            <classpath refid="Test.classpath"/>
+        </junit>
+    </target>
+    <target name="Jy">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.lls.Jy" todir="${junit.output.dir}"/>
+            <classpath refid="Test.classpath"/>
+        </junit>
+    </target>
+    <target name="S">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.lls.S" todir="${junit.output.dir}"/>
+            <classpath refid="Test.classpath"/>
+        </junit>
+    </target>
+    <target name="Test">
+        <java classname="com.lls.Test" failonerror="true" fork="yes">
+            <classpath refid="Test.classpath"/>
+        </java>
+    </target>
+    <target name="TestAll">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.lls.test.TestAll" todir="${junit.output.dir}"/>
+            <classpath refid="Test.classpath"/>
+        </junit>
+    </target>
+    <target name="XXX">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.lls.XXX" todir="${junit.output.dir}"/>
+            <classpath refid="Test.classpath"/>
+        </junit>
+    </target>
+    <target name="junitreport">
+        <junitreport todir="${junit.output.dir}">
+            <fileset dir="${junit.output.dir}">
+                <include name="TEST-*.xml"/>
+            </fileset>
+            <report format="frames" todir="${junit.output.dir}"/>
+        </junitreport>
+    </target>
+</project>
